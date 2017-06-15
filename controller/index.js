@@ -8,9 +8,9 @@ module.exports = function(app) {
         result: {
           listItem: '.result-row',
           data: {
-            pic: {
-              selector: '.result-img img',
-              attr: 'src'
+            target: {
+              selector: '.result-image',
+              attr: 'href'
             },
             price: '.result-info .result-price',
             date: '.result-info .result-date',
@@ -19,7 +19,11 @@ module.exports = function(app) {
           }
         }
     }).then(data => {
-      console.log(data.result);
+      data.result.forEach(function(item) {
+        if (item.target) {
+          item.target = 'https://sfbay.craigslist.org/' + item.target;
+        }
+      });
       res.render('public/templates/base', data);
     });
   });

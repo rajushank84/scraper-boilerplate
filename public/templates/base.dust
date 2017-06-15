@@ -21,7 +21,9 @@
 				<tbody>
 					{#result}
 						<tr>
-							<td>{title}</td>
+							<td>
+								<a href="{target}" target="_new">{title}</a>
+							</td>
 							<td>{date}</td>
 							<td>{price}</td>
 							<td>{hood}</td>
