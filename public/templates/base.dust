@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>App name</title>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+
+	<body>
+		{>"public/templates/inc/header.dust"/}
+
+		<div id="content">
+			<table>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Date posted</th>
+						<th>Price</th>
+						<th>Hood</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#result}
+						<tr>
+							<td>{title}</td>
+							<td>{date}</td>
+							<td>{price}</td>
+							<td>{hood}</td>
+						</tr>
+					{/result}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
